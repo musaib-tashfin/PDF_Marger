@@ -2,8 +2,14 @@ import tkinter as tk
 
 window = tk.Tk() 
 window.title('PDF marger')
-window.geometry('900x500')
+window.geometry('900x600')
 window.resizable(False,False)
+
+
+imag = tk.PhotoImage(file='Small code projects\Pdf Marger\Logo.png')
+
+Logo = tk.Label(window,image=imag)
+Logo.place(relx=0.27)
 
 entry1 = tk.Entry(window,width=100)
 entry1.place(relx=0.2,rely=0.41)
