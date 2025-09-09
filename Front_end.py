@@ -49,7 +49,7 @@ window.geometry('900x600')
 window.resizable(False,False)
 window.config(bg='gray')
 
-imag = tk.PhotoImage(file='Small code projects/Pdf Marger/Logo.png')
+imag = tk.PhotoImage(file='D:\Workshop\Programming\Small code projects\Pdf Marger\Logo.png')
 img_small = imag.subsample(2,2)
 Logo = tk.Label(window,image=img_small)
 Logo.place(relx=0.35,rely=0.005)
