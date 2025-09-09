@@ -15,9 +15,15 @@ def pdf_merging() :
         for pdf in files:
             merger.append(pdf)
         
-        output_path = os.path.join(output_folder,'Merged_pdf.pdf')
+        output_path = filedialog.asksaveasfilename(
+        defaultextension=".pdf",
+        filetypes=[("PDF Files", "*.pdf")],
+        title="Save Merged PDF As"
+        )
+        if not output_path:
+            return  # user cancelled
         merger.write(output_path)
-        merger.close()
+
 
         tk.messagebox.showinfo('Success',f'PDF merger successfully!\nSaved at {output_path}')
     except Exception as e:
